@@ -74,9 +74,9 @@ class TrashView(context: Context) : FrameLayout(context) {
         visibility = GONE
     }
 
-    /**
-     * Verifica se o ponto fornecido (x, y) está dentro da trash
-     */
+    
+    // Verifica se o ponto (x, y) está dentro da trash
+     
     fun isPointInside(x: Int, y: Int): Boolean {
         val location = IntArray(2)
         getLocationOnScreen(location)
@@ -87,9 +87,8 @@ class TrashView(context: Context) : FrameLayout(context) {
         return x in left..right && y in top..bottom
     }
 
-    /**
-     * Retorna a posição central da TrashView para cálculo de atração
-     */
+    //Retorna a posição central da TrashView para cálculo de atração
+     
     fun getCenterPosition(): Pair<Int, Int> {
         val location = IntArray(2)
         getLocationOnScreen(location)
