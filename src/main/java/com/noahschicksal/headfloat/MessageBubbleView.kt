@@ -66,9 +66,9 @@ class MessageBubbleView(context: Context) : FrameLayout(context) {
         showAtPosition(windowManager, anchorX + 150, anchorY, duration)
     }
 
-    /**
-     * Mostra a mensagem em uma posição específica da tela
-     */
+    
+     // Mostra a mensagem em uma posição específica da tela
+     
     fun showAtPosition(windowManager: WindowManager, x: Int, y: Int, duration: Long) {
         if (layoutParams != null) return
 
