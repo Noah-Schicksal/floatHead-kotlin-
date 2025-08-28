@@ -151,4 +151,6 @@ I don't really know what I'm doing, since Kotlin is new to me. If you have any i
 
 The main goal is to have a bubble that works like the Messenger one, but it randomly changes the image and displays one of the random messages from the profile listed in the JSON, and then repeats. When you click on the bubble, it should expand exactly like the Messenger window, perhaps in a smaller size, displaying an activity or a fragment. I don't know anymore. After three days of sleepless nights trying to get this to work in such an unsatisfactory way, it's a bit difficult to think about.
 
-You might be wondering, "Why are random images and random messages being displayed in the bubble?" Well, that's what my project needs, nothing more. But I believe that if this works, it shouldn't be difficult to adapt it to work as a messenger, or something similar.
+You might be wondering, "Why are random images and random messages being displayed in the bubble?" Well, that's what my project needs, nothing more. But I believe that if this works, it shouldn't be difficult to adapt it to work as a messenger, or something similar. 
+
+I took the trouble to leave some things already defined by default in the library, such as the magnetism on the sides, the way the trash can is displayed, etc.
