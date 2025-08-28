@@ -30,7 +30,7 @@ class OverlayService : Service() {
     private var magnetEnabled: Boolean = true
     private var bubbleBitmap: Bitmap? = null
 
-    // ================= Mini Tela =================
+    // Mini Tela 
     private var pendingMiniFragment: Pair<FragmentActivity, Fragment>? = null
 
     private val messageRunnable = object : Runnable {
@@ -61,12 +61,12 @@ class OverlayService : Service() {
         bubbleSizeDp = intent?.getIntExtra("bubbleSizeDp", 56) ?: 56
         bubbleBitmap = intent?.getParcelableExtra("bubbleBitmap")
 
-        // Carregar perfis se houver caminho
+        // Carregar perfis 
         profileJsonPath?.let {
             profileManager = ProfileManager(this, it)
         }
 
-        // Criar TrashView primeiro (por baixo)
+        // Criar TrashView primeiro 
         if (trashIconRes != null && trashIconRes != -1) {
             trashView = TrashView(this).apply {
                 setIcon(ContextCompat.getDrawable(this@OverlayService, trashIconRes))
@@ -77,7 +77,7 @@ class OverlayService : Service() {
 
         // Criar bolha
         bubbleView = BubbleView(this).apply {
-            setSizeDp(bubbleSizeDp) // deve ser aplicado antes do attachToWindow
+            setSizeDp(bubbleSizeDp)
             setTrashView(trashView!!)
             enableDrag(dragEnabled)
             enableMagnet(magnetEnabled)
@@ -99,7 +99,7 @@ class OverlayService : Service() {
         // Adicionar bolha na tela
         bubbleView?.attachToWindow()
 
-        // Detecta colisão com lixeira para destruir bolha
+        // Detecta colisão com lixeira para destruir a bolha
         bubbleView?.setOnDropListener { x, y ->
             trashView?.let { trash ->
                 if (trash.isPointInside(x, y)) {
@@ -169,7 +169,7 @@ class OverlayService : Service() {
 
     override fun onBind(intent: Intent?): IBinder? = null
 
-    // ================= Mini Tela =================
+    //Mini Tela
     fun setMiniScreenFragment(activity: FragmentActivity, fragment: Fragment) {
         if (bubbleView != null) {
             bubbleView?.setFragment(activity, fragment)
