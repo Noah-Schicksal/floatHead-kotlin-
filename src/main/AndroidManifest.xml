@@ -1,0 +1,12 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.noahschicksal.headfloat">
+
+    <application>
+        <service
+            android:name="com.noahschicksal.headfloat.OverlayService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="mediaProjection|mediaPlayback" />
+    </application>
+
+</manifest>
