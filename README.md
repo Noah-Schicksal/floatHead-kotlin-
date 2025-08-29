@@ -147,6 +147,14 @@ if you want to use profileJsonPath = "" for some fun, the json template is:
 ]
 ```
 
+```kotlin
+binding.appBarMain.fab.setOnClickListener { view ->
+            // Inicia a bolha da biblioteca
+            HeadFloatService.start(this)
+```
+
+Finally, when everything is set up, you can use a simple button to execute the bubble; in the example, I only use the fab in my MainActivity
+
 I don't really know what I'm doing, since Kotlin is new to me. If you have any issues or want to contribute, feel free to do so.
 
 The main goal is to have a bubble that works like the Messenger one, but it randomly changes the image and displays one of the random messages from the profile listed in the JSON, and then repeats. When you click on the bubble, it should expand exactly like the Messenger window, perhaps in a smaller size, displaying an activity or a fragment. I don't know anymore. After three days of sleepless nights trying to get this to work in such an unsatisfactory way, it's a bit difficult to think about.
