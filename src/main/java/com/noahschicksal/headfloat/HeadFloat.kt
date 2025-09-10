@@ -89,7 +89,6 @@ class HeadFloat private constructor(private val context: Context) {
         return this
     }
 
-    // Setter novo para fragment
     fun setMiniFragment(activity: FragmentActivity?, fragment: Fragment?): HeadFloat {
         this.activityContext = activity
         this.miniFragment = fragment
